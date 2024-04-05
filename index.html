@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+        /* Header & Main Section */
+
+        #head{
+            background: url("images/plywood-colorful-decorations.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* padding-top: 100px; */
+            background-position-y: 0;
+        }
+
+        /* Main Section */
+        
+        #mainId{
+            text-align: center;
+        }
+        #mainId >h1{
+            font-size: 35px;
+            text-transform: uppercase;
+            font-family: var(--font1);
+            line-height: 1.5;
+            color: white;
+        }
+        #mainId >h1::before{
+            content: "We Are";
+            display: block;
+            font-size: 20px;
+        }
+        #mainId >h1::after{
+            content: "In Sri Lanka";
+            display: block;
+            font-size: 20px;
+        }
+        #mainId >p{
+            margin: 40px 0;
+            font-family: var(--font2);
+            font-weight: lighter;
+            color: white;
+        }
+        #mainId >button{
+            background: linear-gradient(#FDCA0D, #EBB965);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            font-family: var(--font3);
+            font-size: 26px;
+        }
+        
+        /* Four Card Section */
+
+        #fourCard{
+            background: #BEB0A7;
+        }
+        #fourCardId{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .cards::before{
+            content: "";
+            position: absolute;
+            background: #E8B673;
+            width: 100px;
+            height: 20px;
+            top: -10px;
+            left: -10px;
+            transition: 1s all;
+        }
+        .cards{
+            background: white;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            top: -40px;
+        }
+        .cards::after{
+            content: "";
+            position: absolute;
+            background: #A45B4F;
+            width: 100px;
+            height: 20px;
+            bottom: -10px;
+            right: -10px;
+            transition: 1s all;
+        }
+        .cards:hover::before{
+            width: 260px;
+        }
+        .cards:hover::after{
+            width: 260px;
+        }
+        .cards >img{
+            width: 80px;
+            height: 80px;
+        }
+        .cards >h1{
+            font-family: var(--font1);
+            text-transform: uppercase;
+            margin: 15px 0;
+        }
+        .cards >p{
+            font-family: var(--font1);
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        /* Our Plywood Boards and Sheets */
+
+        #plyWoodBoards{
+            background: white;
+            padding: 50px 0;
+        }
+        #plyWoodBoardsId{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #plyWoodBoardsId >h1{
+            font-family: var(--font3);
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        #plyWoodBoardsId >p{
+            font-family: var(--font1);
+            margin-bottom: 30px;
+            padding-left: 10px;
+        }
+        #plyWoodBoardsId >button{
+            background: linear-gradient(#FCC90C, #ECBA5F);
+            border: none;
+            padding: 10px 80px;
+            color: black;
+            font-family: var(--font3);
+            font-size: 24px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        #sixCard{
+            padding: 0 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        /* Why Plywood Section */
+
+        #whyPlywood{
+            background: linear-gradient(0deg, #BEB0A7 70%, white 30%);
+            padding-bottom: 50px;
+        }
+        #whyPlywoodId{
+            position: relative;
+            /* top: -150px; */
+        }
+        #details{
+            position: absolute;
+            background: white;
+            width: 35%;
+            padding: 50px;
+            top: 60px;
+            left: 780px;
+            z-index: 1;
+        }
+        #details >h1{
+            font-family: var(--font2);
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        #details >p{
+            font-family: var(--font1);
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1250px) {
+
+            /* Why Plywood */
+
+            #whyPlywoodId >img{
+                width: 100%;
+            }
+            #details{
+                left: 0;
+            }
+        }
+
+        @media screen and (max-width:1150px) {
+
+            /* Four Card Section */
+            .cards{
+                width: 45%;
+                margin-bottom: 40px;
+            }
+
+            /* Our Plywood Boards and Sheets */
+            #sixCard{
+                justify-content: center;
+            }
+
+            /* Why Plywood */
+            #details{
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            
+            /* Why Plywood */
+            #details{
+                display: contents;
+                /* margin-top: 20px; */
+            }
+            #whyPlywoodId >img{
+                margin-bottom: 50px;
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            
+            /* Four Card Section */
+            #fourCardId{
+                display: flex;
+                justify-content: center;
+            }
+            .cards{
+                width: 95%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- Header & Main Section -->
+
+    <section id="head">
+        <!-- Header -->
+        <header>
+            <div id="headerId" class="wrapper">
+                <img id="logo" src="images/logo.svg"alt="Logo">
+                <div id="menu">
+                    <nav id="navMenu">
+                        <a class="none" href="index.html">
+                            <img class="active" src="images/home.svg" alt="Home">
+                        </a>
+                        <a class="none" href="about-us.html">About Us</a>
+                        <a class="none" href="all-products.html">All Products</a>
+                        <a class="none" href="contact-us.html">Contact Us</a>
+                        <img src="images/menu.svg" alt="Menu">
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Section -->
+
+        <div id="main">
+            <div id="mainId" class="wrapper">
+                <h1>Plywood Board & Sheet Sellers</h1>
+                <p>Today there is a huge trend towards plywood in Sri Lanka as well as in many other countries in the world, the main reason being the low price, ease of use and special finish. There are many types of plywood boards and sheets available in the market tailored to your various needs. Plywood Sandakelum is located in Ganemulla, Sri Lanka and We sell plywood boards and plywood sheets in any quantity.</p>
+                <button>Our Boards & Sheets</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Four Card Section -->
+
+    <section id="fourCard">
+        <div id="fourCardId" class="wrapper">
+            <div class="cards">
+                <img src="images/door.svg" alt="Door">
+                <h1>Doors</h1>
+                <p>Plywood can be used to make your doors and windows</p>
+            </div>
+            <div class="cards">
+                <img src="images/furniture.svg" alt="Furniture">
+                <h1>Furniture</h1>
+                <p>You can use plywood in your outdoor furniture</p>
+            </div>
+            <div class="cards">
+                <img src="images/floor.svg" alt="Floor">
+                <h1>Floors</h1>
+                <p>Interior plywood can be used for flooring</p>
+            </div>
+            <div class="cards">
+                <img src="images/staircases.svg" alt="Staircases">
+                <h1>Staircases</h1>
+                <p>Plywood will add a good look in your staircases</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Plywood Boards and Sheets -->
+
+    <section id="plyWoodBoards">
+        <div id="plyWoodBoardsId" class="wrapper">
+            <h1>Our Plywood Boards and Sheets</h1>
+            <p>We have different types and sizes of plywood boards and sheets for your needs. You can see them below</p>
+            <div id="sixCard">
+                <div class="boards">
+                    <span class="fixCol"></span>
+                    <h2>Shutter Board</h2>
+                    <img src="images/shutter-board.jpg" alt="Shutter Board">
+                </div>
+                <div class="boards">
+                    <span class="fixCol"></span>
+                    <h2>Hard Board</h2>
+                    <img src="images/hard-board.jpg" alt="Hard Board">
+                </div>
+                <div class="boards">
+                    <span class="fixCol"></span>
+                    <h2>M.D.F Melamine</h2>
+                    <img src="images/mdf-melamine.jpg" alt="M.D.D Melamine">
+                </div>
+                <div class="boards">
+                    <span class="fixCol"></span>
+                    <h2>PVC</h2>
+                    <img src="images/pvc-board.jpg" alt="PVC Board">
+                </div>
+                <div class="boards">
+                    <span class="fixCol"></span>
+                    <h2>Eco Sheets</h2>
+                    <img src="images/eco-sheet.jpg" alt="Eco Sheets">
+                </div>
+                <div class="boards">
+                    <span class="fixCol"></span>
+                    <h2>Cladding Sheet</h2>
+                    <img src="images/cladding-sheet.jpg" alt="Cladding Sheet">
+                </div>
+            </div>
+            <button>View All</button>
+        </div>
+    </section>
+
+    <!-- Why Plywood Section -->
+
+    <section id="whyPlywood">
+        <div id="whyPlywoodId" class="wrapper">
+            <img src="images/plywood-home.jpg" alt="Plywood Home">
+            <div id="details">
+                <h1>Why Plywood</h1>
+                <p>Plywood is made with two or more layers of wood boards which are pressed and glued together. And it is stronger and more durable than ordinary single plank board due to its special manufacturing method. That is one reason why plywood is so popular all over the world. With plywood you can add beauty as well as natural look to your home or garden.</p>
+                <p>There are many benefits to using plywood instead of the usual wood panels and other substitutes. As Ceramic tiles, aluminum and other substitutes are very expensive, using plywood will save your money. Plywood is also non-corrosive and is suitable for chemical work where aluminum and ceramic cannot be used. Plywood boards remain stable to moisture and temperature changes than ordinary wood panels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerId" class="wrapper">
+            <div id="fLogoDiv">
+                <img id="fLogo" src="images/logo2.svg" alt="Logo">
+                <p>All Rights reserved (c) 2023</p>
+                <img src="images/facebook.svg" alt="Facebook">
+            </div>
+            <nav id="footerMenu">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="all-products.html">All Products</a>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <div id="fContactDiv">
+                <div class="fRows">
+                    <img src="images/call.svg" alt="Call">
+                    <p>070 366 2466</p>
+                </div>
+                <div class="fRows">
+                    <img src="images/whatsapp.svg" alt="Whatsapp">
+                    <p>074 150 2503</p>
+                </div>
+                <div class="fRows">
+                    <img src="images/location.svg" alt="Location">
+                    <p>No 300/3, <br> Kadawatha - Ganemulla rd, <br> Ganemulla, Sri Lanka</p>
+                </div>
+                <div id="topButton">
+                    <div id="triangle"></div>
+                    <span>Page Top</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

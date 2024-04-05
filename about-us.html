@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+    /* Header & About Us Section */
+
+        #aboutUs{
+            background: url("images/sandakelum-plywood-wareshouse.jpg");
+            background-repeat: no-repeat;
+            background-size: 4500px 800px;
+            background-position: center;
+            /* padding-top: 100px; */
+            background-position-y: 0;
+        }
+
+        /* About Us Section */
+        
+        #aboutUsId{
+            display: flex;
+            justify-content: flex-start;
+            padding: 150px 0;
+            background: #271f1f75;
+        }
+        #aboutUsSection{
+            padding-right: 680px;
+        }
+        #aboutUsSection >h1{
+            color: white;
+            font-family: var(--font1);
+            text-transform: uppercase;
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+        h1 >span{
+            color: #FFCC00;
+            display: block;
+            font-size: 24px;
+        }
+        #aboutUsSection >p{
+            font-family: var(--font1);
+            color: white;
+            margin-top: 25px;
+        }
+
+        /* Call Us Section */
+        #callUs{
+            background: #A57B4A;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 0;
+        }
+        #callUsId{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #callUsId >h1{
+            font-family: var(--font3);
+            font-size: 40px;
+            letter-spacing: 2px;
+            margin-right: 20px;
+            color: white;
+        }
+        #numbers{
+            display: flex;
+            background: #FFCC00;
+            padding: 10px 50px;
+        }
+        #numbers >img{
+            width: 25px;
+            margin-right: 10px;
+        }
+        #numbers >p{
+            font-family: var(--font3);
+            font-weight: bold;
+            font-size: 20px;
+        }
+        p >span{
+            color: #D08E48;
+        }
+
+        /* Our Warehouse */
+
+        #ourWarehouse{
+            background: white;
+            padding: 50px 0;
+        }
+        #ourWareHouseId >h1{
+            font-family: var(--font3);
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        #ourWareHouseId >p{
+            font-family: var(--font1);
+            margin-bottom: 60px;
+            padding-left: 30px;
+        }
+        #owImages::before{
+            content: "";
+            background: #65352E;
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            z-index: -1;
+            top: -15px;
+            left: -15px;
+        }
+        #owImages{
+            display: flex;
+            position: relative;
+            z-index: 0;
+        }
+        #owImages::after{
+            content: "";
+            background: #E8B673;
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            z-index: -1;
+            bottom: -15px;
+            right: 5px;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1200px) {
+            
+            /* Our Warehouse */
+            #owImages::before{
+                display: none;
+            }
+            #owImages::after{
+                display: none;
+            }
+            #owImages{
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .owCol{
+                display: inline-flex;
+                justify-content: space-between;
+                width: 90%;
+                flex-direction: row;
+                margin-bottom: 20px;
+            }
+            .owCol >img{
+                width: 45%;               
+            }
+        }
+
+        @media screen and (max-width:1150px) {
+
+            /* About Us Section */
+            #aboutUsSection{
+                padding-right: 50%;
+            }
+        }
+
+        @media screen and (max-width:750px) {
+
+            /* About Us Section */
+            #aboutUsSection{
+                padding-right: 50px;
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            
+            /* Call Us Section */
+            #callUsId{
+                flex-direction: column;
+            }
+            p >span{
+                display: block;
+            }
+        }
+
+        @media screen and (max-width:400PX) {
+
+            /* About Us Section */
+            #aboutUsSection{
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & About Us Section -->
+
+    <section id="aboutUs">
+     <!-- Header -->
+        <header>
+            <div id="headerId" class="wrapper">
+                <img id="logo" src="images/logo.svg"alt="Logo">
+                <div id="menu">
+                    <nav id="navMenu">
+                        <a class="none" href="index.html">
+                            <img src="images/home.svg" alt="Home">
+                        </a>
+                        <a class="active none" href="about-us.html">About Us</a>
+                        <a class="none" href="all-products.html">All Products</a>
+                        <a class="none" href="contact-us.html">Contact Us</a>
+                        <img src="images/menu.svg" alt="Menu">
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Us Section -->
+        
+        <div id="aboutUsId">
+            <div id="aboutUsSection" class="wrapper">
+                <h1><span>About</span>Plywood Sandakelum</h1>
+                <p>The business Sandakelum started with the sale of planks wood and has grown into the sale of plywood boards and sheets today. Having won the trust of our customers for over twenty years, we are always committed to providing a better service to our customers.</p>
+                <p>We sell a number of imported plywood types in Sri Lanka. Contact us for more information about our sheets and borads</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call Us Section -->
+
+    <section id="callUs">
+        <div id="callUsId" class="wrapper">
+            <h1>Call Us:</h1>
+            <div id="numbers">
+                <img src="images/call-icon.svg" alt="Call Icon">
+                <p>074 150 2503 <span>|</span> 070 366 2466</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Warehouse -->
+
+    <section id="ourWarehouse">
+        <div id="ourWareHouseId" class="wrapper">
+            <h1>Our warehouse</h1>
+            <p>Come to our warehouse and choose the plywood sheets and boards that suit your needs. Our address is : No 241/A, Kadawatha rd, Ganemulla, Sri Lanka</p>
+            <div id="owImages">
+                <div class="owCol">
+                    <img src="images/warehouse-1.jpg" alt="Warehouse">
+                    <img src="images/warehouse-2.jpg" alt="Warehouse">
+                </div>
+                <div class="owCol">
+                    <img src="images/warehouse-3.jpg" alt="Warehouse">
+                    <img src="images/warehouse-6.jpg" alt="Warehouse">
+                </div>
+                <div class="owCol">
+                    <img src="images/warehouse-5.jpg" alt="Warehouse">
+                    <img src="images/warehouse-4.jpg" alt="Warehouse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerId" class="wrapper">
+            <div id="fLogoDiv">
+                <img id="fLogo" src="images/logo2.svg" alt="Logo">
+                <p>All Rights reserved (c) 2023</p>
+                <img src="images/facebook.svg" alt="Facebook">
+            </div>
+            <nav id="footerMenu">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="all-products.html">All Products</a>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <div id="fContactDiv">
+                <div class="fRows">
+                    <img src="images/call.svg" alt="Call">
+                    <p>070 366 2466</p>
+                </div>
+                <div class="fRows">
+                    <img src="images/whatsapp.svg" alt="Whatsapp">
+                    <p>074 150 2503</p>
+                </div>
+                <div class="fRows">
+                    <img src="images/location.svg" alt="Location">
+                    <p>No 300/3, <br> Kadawatha - Ganemulla rd, <br> Ganemulla, Sri Lanka</p>
+                </div>
+                <div id="topButton">
+                    <div id="triangle"></div>
+                    <span>Page Top</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

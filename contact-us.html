@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+
+        /* Header & Contact Us Section */
+
+        #contactUs{
+            background: url("images/phone-on-plywood.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* padding-top: 100px; */
+            background-position-y: 0;
+        }
+
+        /* Contact Us Section */
+
+        #contactUsId{
+            padding: 150px 0;
+            background: #534b4b61;
+        }
+        #contactSec{
+            padding-right: 700px;
+        }
+        #contactSec >h1{
+            font-family: var(--font1);
+            text-transform: uppercase;
+            font-size: 30px;
+            color: #FFCC04;
+            margin-bottom: 20px;
+        }
+        h1 >span{
+            color: white;
+            font-size: 40px;
+        }
+        #contactSec >p{
+            font-family: var(--font1);
+            color: white;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Map Section */
+
+        #map{
+            background: linear-gradient(#BEB0A7 50%, white 50%);
+        }
+        #mapId::before{
+            content: "";
+            position: absolute;
+            background: #65352E;
+            width: 120px;
+            height: 150px;
+            top: 35px;
+            right: 20px;
+            z-index: -1;
+
+        }
+        #mapId{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            position: relative;
+            z-index: 0;
+        }
+        #mapId::after{
+            content: "";
+            position: absolute;
+            background: #A57B4A;
+            width: 120px;
+            height: 150px;
+            bottom: 35px;
+            left: 20px;
+            z-index: -1;
+        }
+        a >button{
+            position: absolute;
+            background: linear-gradient(#FDCA0D, #EBB966);
+            color: black;
+            border: none;
+            font-family: var(--font3);
+            font-size: 22px;
+            padding: 10px 30px;
+            border-radius: 20px;
+            font-weight: bold;
+            top: 250px;
+            left: 450px;
+            cursor: pointer;
+        }
+
+        /* Contact Details */
+
+        /* #contactDetails{ */
+            /* background: white;  Problem */
+            /* padding-bottom: 100px;  Problem */
+        /* } */
+        #contactDetailsId{
+            padding-bottom: 80px;  /* No Problem*/
+        }
+        #contactDetailsId >h1{
+            font-family: var(--font3);
+            font-size: 35px;
+            margin-bottom: 50px;
+        }
+        #contactDetailsId >p{
+            font-family: var(--font1);
+            padding-left: 20px;
+        }
+        #cDetails{
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cHeading{
+            display: flex;
+            align-items: center;
+        }
+        .cHeading >h2{
+            font-family: var(--font3);
+            font-weight: lighter;
+            font-size: 28px;
+        }
+        .contactCard{
+            /* position: relative; */
+            width: 23%;
+        }
+        .square{
+            background: #65352E;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .details{
+            display: flex;
+            margin-bottom: 5px;
+            align-items: flex-start;
+        }
+        .details >p{
+            font-family: var(--font3);
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        .animation{
+            margin-top: 15px;
+            position: relative;
+            width: 100%;
+            height: 150px;
+            transition: 0.5s all;
+        }
+        .cardBgImg{
+            background: url(images/plywood-bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 90%;
+            height: 145px;
+            position: absolute;
+            top: 20px;
+            transition: 0.5s all;
+            /* background-position: 0px 40px; */
+            
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background: white;
+            position: absolute;
+            border: 1px solid #65352E;
+            padding: 30px 40px;
+            left: 10px;
+            width: 250px;
+            height: 150px;
+            transition: 0.5s all;
+        }
+        .animation:hover .card{
+            left: 0;
+            width: 260px;
+        }
+        .animation:hover .cardBgImg{
+            top: 0;
+            /* background-position: 0px 60px; */
+            /* height: 155px; */
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:1250px) {
+
+            /* Map Section */
+            #mapId{
+                width: 80%;
+            }
+            #mapId >img{
+                width: 90%;
+            }
+            #mapId >a >button{
+                display: contents;
+                background: linear-gradient(#FDCA0D, #EBB966);
+                color: black;
+                border: none;
+                font-family: var(--font3);
+                font-size: 22px;
+                padding: 10px 30px;
+                border-radius: 20px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                cursor: pointer;
+            }
+            #mapId::after {
+                bottom: 61px;
+                left: 28px;
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+
+            /* Contact Details */
+            #cDetails{
+                justify-content: space-around;
+            }
+        }
+
+        @media screen and (max-width:1100px) {
+
+            /* Contact Us Section */
+            #contactSec {
+                padding-right: 0;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+
+            /* Map Section */
+            #mapId::after {
+                left: 22px;
+            }
+
+            /* Contact Details */
+            #cDetails{
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .contactCard{
+                width: 90%;
+                margin-bottom: 30px;
+            }
+            .cardBgImg{
+                width: 30%;
+            }
+        }
+
+        @media screen and (max-width:700px) {
+            
+            /* Map Section */
+            #mapId::before{
+                display: none;
+            }
+
+            #mapId::after{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header & Contact Us Section -->
+
+    <section id="contactUs">
+        <!-- Header -->
+        <header>
+            <div id="headerId" class="wrapper">
+                <img id="logo" src="images/logo.svg"alt="Logo">
+                <div id="menu">
+                    <nav id="navMenu">
+                        <a class="none" href="index.html">
+                            <img src="images/home.svg" alt="Home">
+                        </a>
+                        <a class="none" href="about-us.html">About Us</a>
+                        <a class="none" href="all-products.html">All Products</a>
+                        <a class="active none" href="contact-us.html">Contact Us</a>
+                        <img src="images/menu.svg" alt="Menu">
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contact Us Section -->
+        <div id="contactUsId">
+            <div id="contactSec" class="wrapper">
+                <h1>Contact<span> Us</span></h1>
+                <p>We are open on 9AM - 6PM everyday and our mobile numbers are available 24/7.</p>
+                <p>If it is hard you to visit us then you can place your order by contacting us and transfer money to our bank account. Call us for more information.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+
+    <section id="map">
+        <div id="mapId" class="wrapper">
+            <img src="images/map.jpg" alt="Map">
+            <a href="https://maps.app.goo.gl/svEwLwwNG96NeDiF9"><button>Open in Google Map</button></a>
+        </div>
+    </section>
+
+    <!-- Contact Details -->
+
+    <section id="contactDetails">
+        <div id="contactDetailsId" class="wrapper">
+            <h1>Contact Details</h1>
+            <p>You can contact us at any time using the contact information below</p>
+            <div id="cDetails">
+                <div class="contactCard">
+                    <div class="cHeading">
+                        <div class="square"></div>
+                        <h2>Call Us</h2>
+                    </div>
+                    <div class="animation">
+                        <div class="cardBgImg"></div>
+                        <div class="card">
+                            <div class="details">
+                                <img src="images/call1.svg" alt="Call">
+                                <p>074 150 2503</p>
+                            </div>
+                            <div class="details">
+                                <img src="images/call1.svg" alt="Call">
+                                <p>070 366 2466</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="cHeading">
+                        <div class="square"></div>
+                        <h2>Address</h2>
+                    </div>
+                    <div class="animation">
+                        <div class="cardBgImg"></div>
+                        <div class="card">
+                            <div class="details">
+                                <img src="images/location1.svg" alt="Location">
+                                <p>No 241/A,Kadawatha rd,Ganemulla, Sri Lanka</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="cHeading">
+                        <div class="square"></div>
+                        <h2>Social Media</h2>
+                    </div>
+                    <div class="animation">
+                        <div class="cardBgImg"></div>
+                        <div class="card">
+                            <div class="details">
+                                <img src="images/whatsapp1.svg" alt="Whatsapp">
+                                <p>074 150 2503</p>
+                            </div>
+                            <div class="details">
+                                <img src="images/facebook1.svg" alt="Facebook">
+                                <p>Sandakelum Plywood</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div id="footerId" class="wrapper">
+            <div id="fLogoDiv">
+                <img id="fLogo" src="images/logo2.svg" alt="Logo">
+                <p>All Rights reserved (c) 2023</p>
+                <img src="images/facebook.svg" alt="Facebook">
+            </div>
+            <nav id="footerMenu">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="all-products.html">All Products</a>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <div id="fContactDiv">
+                <div class="fRows">
+                    <img src="images/call.svg" alt="Call">
+                    <p>070 366 2466</p>
+                </div>
+                <div class="fRows">
+                    <img src="images/whatsapp.svg" alt="Whatsapp">
+                    <p>074 150 2503</p>
+                </div>
+                <div class="fRows">
+                    <img src="images/location.svg" alt="Location">
+                    <p>No 300/3, <br> Kadawatha - Ganemulla rd, <br> Ganemulla, Sri Lanka</p>
+                </div>
+                <div id="topButton">
+                    <div id="triangle"></div>
+                    <span>Page Top</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
